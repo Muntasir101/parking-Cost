@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Cost Calculator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-3">
+        <div class="container">
+            <h1>Parking Cost Calculator</h1>
+        </div>
+    </header>
+
+    <div class="container my-5">
+        <div class="calculation-section p-4">
+            <form id="parking-form">
+                <div class="form-group">
+                    <label for="type" class="form-label">Choose a Parking Lot:</label>
+                    <select class="form-control" id="type" name="type">
+                        <option value="valet">VIP Parking</option>
+                        <option value="short-term">Short-Term Parking</option>
+                        <option value="long-term-garage">Long-Term Garage Parking</option>
+                        <option value="long-term-surface">Long-Term Surface Parking</option>
+                        <option value="economy">Economy Lot Parking</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="entry-date" class="form-label">Please input entry date and time:</label>
+                    <input type="date" class="form-control" id="entry-date" name="entry-date" required>
+                    <input type="time" class="form-control mt-2" id="entry-time" name="entry-time" required>
+                </div>
+                <div class="form-group">
+                    <label for="exit-date" class="form-label">Please input leaving date and time:</label>
+                    <input type="date" class="form-control" id="exit-date" name="exit-date" required>
+                    <input type="time" class="form-control mt-2" id="exit-time" name="exit-time" required>
+                </div>
+                <button type="button" class="btn btn-primary btn-block" onclick="calculateCost()">Calculate</button>
+            </form>
+            <p class="mt-4" id="result">ESTIMATED PARKING COSTS: $0.00</p>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Parking Services. All rights reserved.</p>
+            <a href="#" class="text-white">Privacy Policy</a> | <a href="#" class="text-white">Terms of Service</a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
